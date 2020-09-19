@@ -11,6 +11,8 @@
 
 #if os(watchOS)
 import WatchKit
+#elseif os(macOS)
+import AppKit
 #else
 import UIKit
 #endif
@@ -298,6 +300,255 @@ public enum Device {
     ///
     /// ![Image](https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP808/sp808-apple-watch-series-5_2x.png)
     case appleWatchSeries5_44mm
+  #elseif os(macOS)
+    /// Device is a [Mac mini (2018)](https://support.apple.com/kb/SP782)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macmini/mac-mini-2018-space-gray.jpg)
+    case macMini2018
+    /// Device is a [Mac mini (Late 2014)](https://support.apple.com/kb/SP710)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macmini/mac-mini-2014.jpg)
+    case macMiniLate2014
+    /// Device is a [Mac mini (Late 2012)](https://support.apple.com/kb/SP659)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macmini/mac-mini-2011-2012-2014-device.jpg)
+    case macMiniLate2012
+    /// Device is a [Mac mini (Mid 2011)](https://support.apple.com/kb/SP632)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macmini/mac-mini-2011-2012-2014-device.jpg)
+    case macMiniMid2011
+    /// Device is a [Mac mini (Mid 2010)](https://support.apple.com/kb/SP585)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macmini/mac-mini-2010-device.jpg)
+    case macMiniMid2010
+    /// Device is a [Mac mini (Late 2009)](https://support.apple.com/kb/SP577) or [Mac mini (Early 2009)](https://support.apple.com/kb/SP505)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macmini/mac-mini-2009-device.jpg)
+    case macMini2009
+    /// Device is a [iMac (Retina 5K, 27-inch, 2019)](https://support.apple.com/kb/SP790)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/imac/imac-27-2017.jpg)
+    case iMacRetina5K27Inch2019
+    /// Device is a [iMac (Retina 4K, 21.5-inch, 2019)](https://support.apple.com/kb/SP789)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/imac/imac-21-5-2017.jpg)
+    case iMacRetina4K215Inch2019
+    /// Device is a [iMac (Retina 5K, 27-inch, 2017)](https://support.apple.com/kb/SP760)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/imac/imac-27-2017.jpg)
+    case iMacRetina5K27Inch2017
+    /// Device is a [iMac (Retina 4K, 21.5-inch, 2017)](https://support.apple.com/kb/SP759)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/imac/imac-21-5-2017.jpg)
+    case iMacRetina4K215Inch2017
+    /// Device is a [iMac (21.5-inch, 2017)](https://support.apple.com/kb/SP758)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/imac/imac-21-5-2017.jpg)
+    case iMac215Inch2017
+    /// Device is a [iMac (Retina 5K, 27-inch, Late 2015)](https://support.apple.com/kb/SP731)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/imac/imac-27-late-2015.jpg)
+    case iMacRetina5K27InchLate2015
+    /// Device is a [iMac (Retina 4K, 21.5-inch, Late 2015)](https://support.apple.com/kb/SP732)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/imac/imac-21-5-2015.jpg)
+    case iMacRetina4K215InchLate2015
+    /// Device is a [iMac (21.5-inch, Late 2015)](https://support.apple.com/kb/SP733)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/imac/imac-21-5-2015.jpg)
+    case iMac215InchLate2015
+    /// Device is a [iMac (Retina 5K, 27-inch, Mid 2015)](https://support.apple.com/kb/SP718) or [iMac (Retina 5K, 27-inch, Late 2014)](https://support.apple.com/kb/SP707)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/imac/imac-27-late-2015.jpg)
+    case iMacRetina5K27InchMid2015
+    /// Device is a [iMac (21.5-inch, Mid 2014)](https://support.apple.com/kb/SP701)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/imac/imac-27-2014.jpg)
+    case iMac215InchMid2014
+    /// Device is a [iMac (27-inch, Late 2013)](https://support.apple.com/kb/SP688)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/imac/imac-27-2013.jpg)
+    case iMac27InchLate2013
+    /// Device is a [iMac (21.5-inch, Late 2013)](https://support.apple.com/kb/SP687)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/imac/imac-27-2013.jpg)
+    case iMac215InchLate2013
+    /// Device is a [iMac (21.5-inch, Late 2012)](https://support.apple.com/kb/SP665)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/imac/imac-27-2012.jpg)
+    case iMac215InchLate2012
+    /// Device is a [iMac (27-inch, Mid 2011)](https://support.apple.com/kb/SP689)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/imac/imac-27-2011.jpg)
+    case iMac27InchMid2011
+    /// Device is a [iMac (21.5-inch, Mid 2011)](https://support.apple.com/kb/SP623)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/imac/imac-27-2011.jpg)
+    case iMac215InchMid2011
+    /// Device is a [iMac (27-inch, Mid 2010)](https://support.apple.com/kb/SP695)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/imac/imac-27-2010.jpg)
+    case iMac27InchMid2010
+    /// Device is a [iMac (21.5-inch, Mid 2010)](https://support.apple.com/kb/SP588)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/imac/imac-27-2010.jpg)
+    case iMac215InchMid2010
+    /// Device is a [Mac Pro (2019)](https://support.apple.com/kb/SP797)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macpro/id-mac-pro-2019.jpg)
+    case macPro2019
+    /// Device is a [Mac Pro (Late 2013)](https://support.apple.com/kb/SP697)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macpro/id-mac-pro-2013.jpg)
+    case macProLate2013
+    /// Device is a [Mac Pro (Mid 2012)](https://support.apple.com/kb/SP652)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macpro/id-mac-pro-2009-2012.jpg)
+    case macProMid2012
+    /// Device is a [Mac Pro (Early 2009)](https://support.apple.com/kb/SP506)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macpro/id-mac-pro-2009-2012.jpg)
+    case macProEarly2009
+    /// Device is a [MacBook (Retina, 12-inch, 2017)](https://support.apple.com/kb/SP757)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbook/macbook-2017-device.jpg)
+    case macBookRetina12Inch2017
+    /// Device is a [MacBook (Retina, 12-inch, Early 2016)](https://support.apple.com/kb/SP741)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbook/macbook-2016-device.jpg)
+    case macBookRetina12InchEarly2016
+    /// Device is a [MacBook (Retina, 12-inch, Early 2015)](https://support.apple.com/kb/SP712)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbook/macbook-2015-device.jpg)
+    case macBookRetina12InchEarly2015
+    /// Device is a [MacBook (13-inch, Mid 2010)](https://support.apple.com/kb/SP584)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbook/macbook-late-2009-2010-device.jpg)
+    case macBook13InchMid2010
+    /// Device is a [MacBook (13-inch, Late 2009)](https://support.apple.com/kb/SP579)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbook/macbook-late-2009-2010-device.jpg)
+    case macBook13InchLate2009
+    /// Device is a [MacBook Air (Retina, 13-inch, 2019)](https://support.apple.com/kb/SP798)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookair/macbook-air-2018-device.jpg)
+    case macBookAirRetina13Inch2019
+    /// Device is a [MacBook Air (Retina, 13-inch, 2018)](https://support.apple.com/kb/SP783)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookair/macbook-air-2018-device.jpg)
+    case macBookAirRetina13Inch2018
+    /// Device is a [MacBook Air (13-inch, 2017)](https://support.apple.com/kb/SP753)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookair/macbook-air-2017-device.jpg)
+    case macBookAir13Inch2017
+    /// Device is a [MacBook Air (13-inch, Early 2015)](https://support.apple.com/kb/SP714)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookair/macbook-air-2015-13in-device.jpg)
+    case macBookAir13InchEarly2015
+    /// Device is a [MacBook Air (11-inch, Early 2015)](https://support.apple.com/kb/SP713)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookair/macbook-air-2015-11in-device.jpg)
+    case macBookAir11InchEarly2015
+    /// Device is a [MacBook Air (13-inch, Early 2014)](https://support.apple.com/kb/SP700) or [MacBook Air (13-inch, Mid 2013)](https://support.apple.com/kb/SP678)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookair/macbook-air-2013-2014-13in-device.jpg)
+    case macBookAir13InchEarly2014
+    /// Device is a [MacBook Air (11-inch, Early 2014)](https://support.apple.com/kb/SP699) or [MacBook Air (11-inch, Mid 2013)](https://support.apple.com/kb/SP677)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookair/macbook-air-2013-2014-11in-device.jpg)
+    case macBookAir11InchEarly2014
+    /// Device is a [MacBook Air (13-inch, Mid 2012)](https://support.apple.com/kb/SP670)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookair/macbook-air-2012-13in-device.jpg)
+    case macBookAir13InchMid2012
+    /// Device is a [MacBook Air (11-inch, Mid 2012)](https://support.apple.com/kb/SP650)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookair/macbook-air-2012-11in-device.jpg)
+    case macBookAir11InchMid2012
+    /// Device is a [MacBook Air (13-inch, Mid 2011)](https://support.apple.com/kb/SP683)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookair/macbook-air-2011-13in-device.jpg)
+    case macBookAir13InchMid2011
+    /// Device is a [MacBook Air (11-inch, Mid 2011)](https://support.apple.com/kb/SP631)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookair/macbook-air-2011-11in-device.jpg)
+    case macBookAir11InchMid2011
+    /// Device is a [MacBook Air (13-inch, Late 2010)](https://support.apple.com/kb/SP618)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookair/macbook-air-2009-2010-13in-device.jpg)
+    case macBookAir13InchLate2010
+    /// Device is a [MacBook Air (11-inch, Late 2010)](https://support.apple.com/kb/SP617)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookair/macbook-air-2010-11in-device.jpg)
+    case macBookAir11InchLate2010
+    /// Device is a [MacBook Air (Mid 2009)](https://support.apple.com/kb/SP548)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookair/macbook-air-2009-2010-13in-device.jpg)
+    case macBookAirMid2009
+    /// Device is a [MacBook Pro (16-inch, 2019)](https://support.apple.com/kb/SP809)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-16in-2019.jpg)
+    case macBookPro16Inch2019
+    /// Device is a [MacBook Pro (13-inch, 2019, Two Thunderbolt 3 ports)](https://support.apple.com/kb/SP799)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-2018-13in-device.jpg)
+    case macBookPro13Inch2019TwoThunderbolt3Ports
+    /// Device is a [MacBook Pro (15-inch, 2019)](https://support.apple.com/kb/SP794)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-2018-15in-device.jpg)
+    case macBookPro15Inch2019
+    /// Device is a [MacBook Pro (13-inch, 2019, Four Thunderbolt 3 ports)](https://support.apple.com/kb/SP795) or [MacBook Pro (13-inch, 2018, Four Thunderbolt 3 ports)](https://support.apple.com/kb/SP775)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-2018-13in-device.jpg)
+    case macBookPro13Inch2019FourThunderbolt3Ports
+    /// Device is a [MacBook Pro (15-inch, 2018)](https://support.apple.com/kb/SP776)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-2018-15in-device.jpg)
+    case macBookPro15Inch2018
+    /// Device is a [MacBook Pro (15-inch, 2017)](https://support.apple.com/kb/SP756)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-2017-15in-device.jpg)
+    case macBookPro15Inch2017
+    /// Device is a [MacBook Pro (13-inch, 2017, Four Thunderbolt 3 ports)](https://support.apple.com/kb/SP755)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-2017-13in-device.jpg)
+    case macBookPro13Inch2017FourThunderbolt3Ports
+    /// Device is a [MacBook Pro (13-inch, 2017, Two Thunderbolt 3 ports)](https://support.apple.com/kb/SP754)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-2017-13in-device-2thunderbolt-3ports.jpg)
+    case macBookPro13Inch2017TwoThunderbolt3Ports
+    /// Device is a [MacBook Pro (15-inch, 2016)](https://support.apple.com/kb/SP749)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-2016-15in-device.jpg)
+    case macBookPro15Inch2016
+    /// Device is a [MacBook Pro (13-inch, 2016, Four Thunderbolt 3 ports)](https://support.apple.com/kb/SP748)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-2016-13in-device.jpg)
+    case macBookPro13Inch2016FourThunderbolt3Ports
+    /// Device is a [MacBook Pro (13-inch, 2016, Two Thunderbolt 3 ports)](https://support.apple.com/kb/SP747)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-2016-13in-device.jpg)
+    case macBookPro13Inch2016TwoThunderbolt3Ports
+    /// Device is a [MacBook Pro (Retina, 15-inch, Mid 2015)](https://support.apple.com/kb/SP719)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-mid-2015-15in-device.jpg)
+    case macBookProRetina15InchMid2015
+    /// Device is a [MacBook Pro (Retina, 13-inch, Early 2015)](https://support.apple.com/kb/SP715)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-early-2015-13in-device.jpg)
+    case macBookProRetina13InchEarly2015
+    /// Device is a [MacBook Pro (Retina, 15-inch, Mid 2014)](https://support.apple.com/kb/SP704) or [MacBook Pro (Retina, 15-inch, Late 2013)](https://support.apple.com/kb/SP690)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-mid-2014-15in-device.jpg)
+    case macBookProRetina15InchMid2014
+    /// Device is a [MacBook Pro (Retina, 13-inch, Mid 2014)](https://support.apple.com/kb/SP703) or [MacBook Pro (Retina, 13-inch, Late 2013)](https://support.apple.com/kb/SP691)
+    ///
+    /// ![Image](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbookpro/macbook-pro-mid-2014-13in-device.jpg)
+    case macBookProRetina13InchMid2014
+    /// Device is an [iMac Pro](https://support.apple.com/kb/SP771)
+    ///
+    /// ![Image](https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP771/SP771-imac-pro-2017.png)
+    case iMacPro2017
   #endif
 
   /// Device is [Simulator](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/iOS_Simulator_Guide/Introduction/Introduction.html)
@@ -317,6 +568,12 @@ public enum Device {
 
   /// Gets the identifier from the system, such as "iPhone7,1".
   public static var identifier: String = {
+    #if os(macOS)
+    let identifier = try? sysctlData(for: [CTL_HW, HW_MODEL]).withUnsafeBufferPointer { dataPointer -> String? in
+        dataPointer.baseAddress.flatMap { String(validatingUTF8: $0) }
+    }
+    return identifier ?? ""
+    #else
     var systemInfo = utsname()
     uname(&systemInfo)
     let mirror = Mirror(reflecting: systemInfo.machine)
@@ -326,6 +583,7 @@ public enum Device {
       return identifier + String(UnicodeScalar(UInt8(value)))
     }
     return identifier
+    #endif
   }()
 
   /// Maps an identifier to a Device. If the identifier can not be mapped to an existing device, `UnknownDevice(identifier)` is returned.
@@ -409,6 +667,72 @@ public enum Device {
       case "Watch5,1", "Watch5,3": return appleWatchSeries5_40mm
       case "Watch5,2", "Watch5,4": return appleWatchSeries5_44mm
       case "i386", "x86_64": return simulator(mapToDevice(identifier: ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] ?? "watchOS"))
+      default: return unknown(identifier)
+      }
+    #elseif os(macOS)
+      switch identifier {
+      case "Macmini8,1": return macMini2018
+      case "Macmini7,1": return macMiniLate2014
+      case "Macmini6,1", "Macmini6,2": return macMiniLate2012
+      case "Macmini5,1", "Macmini5,2": return macMiniMid2011
+      case "Macmini4,1": return macMiniMid2010
+      case "Macmini3,1": return macMini2009
+      case "iMac19,1": return iMacRetina5K27Inch2019
+      case "iMac19,2": return iMacRetina4K215Inch2019
+      case "iMac18,3": return iMacRetina5K27Inch2017
+      case "iMac18,2": return iMacRetina4K215Inch2017
+      case "iMac18,1": return iMac215Inch2017
+      case "iMac17,1": return iMacRetina5K27InchLate2015
+      case "iMac16,2": return iMacRetina4K215InchLate2015
+      case "iMac16,1": return iMac215InchLate2015
+      case "iMac15,1": return iMacRetina5K27InchMid2015
+      case "iMac14,4": return iMac215InchMid2014
+      case "iMac14,2": return iMac27InchLate2013
+      case "iMac14,1": return iMac215InchLate2013
+      case "iMac13,1": return iMac215InchLate2012
+      case "iMac12,2": return iMac27InchMid2011
+      case "iMac12,1": return iMac215InchMid2011
+      case "iMac11,3": return iMac27InchMid2010
+      case "iMac11,2": return iMac215InchMid2010
+      case "MacPro7,1": return macPro2019
+      case "MacPro6,1": return macProLate2013
+      case "MacPro5,1": return macProMid2012
+      case "MacPro4,1": return macProEarly2009
+      case "MacBook10,1": return macBookRetina12Inch2017
+      case "MacBook9,1": return macBookRetina12InchEarly2016
+      case "MacBook8,1": return macBookRetina12InchEarly2015
+      case "MacBook7,1": return macBook13InchMid2010
+      case "MacBook6,1": return macBook13InchLate2009
+      case "MacBookAir8,2": return macBookAirRetina13Inch2019
+      case "MacBookAir8,1": return macBookAirRetina13Inch2018
+      case "MacBookAir7,3": return macBookAir13Inch2017
+      case "MacBookAir7,2": return macBookAir13InchEarly2015
+      case "MacBookAir7,1": return macBookAir11InchEarly2015
+      case "MacBookAir6,2": return macBookAir13InchEarly2014
+      case "MacBookAir6,1": return macBookAir11InchEarly2014
+      case "MacBookAir5,2": return macBookAir13InchMid2012
+      case "MacBookAir5,1": return macBookAir11InchMid2012
+      case "MacBookAir4,2": return macBookAir13InchMid2011
+      case "MacBookAir4,1": return macBookAir11InchMid2011
+      case "MacBookAir3,2": return macBookAir13InchLate2010
+      case "MacBookAir3,1": return macBookAir11InchLate2010
+      case "MacBookAir2,1": return macBookAirMid2009
+      case "MacBookPro16,1": return macBookPro16Inch2019
+      case "MacBookPro15,4": return macBookPro13Inch2019TwoThunderbolt3Ports
+      case "MacBookPro15,3": return macBookPro15Inch2019
+      case "MacBookPro15,2": return macBookPro13Inch2019FourThunderbolt3Ports
+      case "MacBookPro15,1": return macBookPro15Inch2018
+      case "MacBookPro14,3": return macBookPro15Inch2017
+      case "MacBookPro14,2": return macBookPro13Inch2017FourThunderbolt3Ports
+      case "MacBookPro14,1": return macBookPro13Inch2017TwoThunderbolt3Ports
+      case "MacBookPro13,3": return macBookPro15Inch2016
+      case "MacBookPro13,2": return macBookPro13Inch2016FourThunderbolt3Ports
+      case "MacBookPro13,1": return macBookPro13Inch2016TwoThunderbolt3Ports
+      case "MacBookPro11,4": return macBookProRetina15InchMid2015
+      case "MacBookPro12,1": return macBookProRetina13InchEarly2015
+      case "MacBookPro11,2": return macBookProRetina15InchMid2014
+      case "MacBookPro11,1": return macBookProRetina13InchMid2014
+      case "iMacPro1,1": return iMacPro2017
       default: return unknown(identifier)
       }
     #endif
@@ -502,6 +826,8 @@ public enum Device {
       case .simulator(let model): return model.diagonal
       case .unknown: return -1
       }
+    #elseif os(macOS)
+      return -1
     #endif
   }
   #endif
@@ -579,6 +905,8 @@ public enum Device {
       case .unknown: return (width: -1, height: -1)
       }
     #elseif os(tvOS)
+      return (width: -1, height: -1)
+    #elseif os(macOS)
       return (width: -1, height: -1)
     #endif
   }
@@ -811,6 +1139,67 @@ public enum Device {
     public var hasForceTouchSupport: Bool {
       return isOneOf(Device.allWatchesWithForceTouchSupport) || isOneOf(Device.allWatchesWithForceTouchSupport.map(Device.simulator))
     }
+  #elseif os(macOS)
+  /// All Macs
+  public static var allMacs: [Device] {
+     return [.macMini2018, .macMiniLate2014, .macMiniLate2012, .macMiniMid2011, .macMiniMid2010, .macMini2009, .iMacRetina5K27Inch2019, .iMacRetina4K215Inch2019, .iMacRetina5K27Inch2017, .iMacRetina4K215Inch2017, .iMac215Inch2017, .iMacRetina5K27InchLate2015, .iMacRetina4K215InchLate2015, .iMac215InchLate2015, .iMacRetina5K27InchMid2015, .iMac215InchMid2014, .iMac27InchLate2013, .iMac215InchLate2013, .iMac215InchLate2012, .iMac27InchMid2011, .iMac215InchMid2011, .iMac27InchMid2010, .iMac215InchMid2010, .macPro2019, .macProLate2013, .macProMid2012, .macProEarly2009, .macBookRetina12Inch2017, .macBookRetina12InchEarly2016, .macBookRetina12InchEarly2015, .macBook13InchMid2010, .macBook13InchLate2009, .macBookAirRetina13Inch2019, .macBookAirRetina13Inch2018, .macBookAir13Inch2017, .macBookAir13InchEarly2015, .macBookAir11InchEarly2015, .macBookAir13InchEarly2014, .macBookAir11InchEarly2014, .macBookAir13InchMid2012, .macBookAir11InchMid2012, .macBookAir13InchMid2011, .macBookAir11InchMid2011, .macBookAir13InchLate2010, .macBookAir11InchLate2010, .macBookAirMid2009, .macBookPro16Inch2019, .macBookPro13Inch2019TwoThunderbolt3Ports, .macBookPro15Inch2019, .macBookPro13Inch2019FourThunderbolt3Ports, .macBookPro15Inch2018, .macBookPro15Inch2017, .macBookPro13Inch2017FourThunderbolt3Ports, .macBookPro13Inch2017TwoThunderbolt3Ports, .macBookPro15Inch2016, .macBookPro13Inch2016FourThunderbolt3Ports, .macBookPro13Inch2016TwoThunderbolt3Ports, .macBookProRetina15InchMid2015, .macBookProRetina13InchEarly2015, .macBookProRetina15InchMid2014, .macBookProRetina13InchMid2014, .iMacPro2017]
+  }
+
+  public static var allMacMinis: [Device] {
+     return [.macMini2018, .macMiniLate2014, .macMiniLate2012, .macMiniMid2011, .macMiniMid2010, .macMini2009]
+  }
+
+  public static var allMacBookAirs: [Device] {
+     return [.macBookAirRetina13Inch2019, .macBookAirRetina13Inch2018, .macBookAir13Inch2017, .macBookAir13InchEarly2015, .macBookAir11InchEarly2015, .macBookAir13InchEarly2014, .macBookAir11InchEarly2014, .macBookAir13InchMid2012, .macBookAir11InchMid2012, .macBookAir13InchMid2011, .macBookAir11InchMid2011, .macBookAir13InchLate2010, .macBookAir11InchLate2010, .macBookAirMid2009]
+  }
+
+  public static var allMacBooks: [Device] {
+     return [.macBookRetina12Inch2017, .macBookRetina12InchEarly2016, .macBookRetina12InchEarly2015, .macBook13InchMid2010, .macBook13InchLate2009]
+  }
+
+  public static var allMacBookPros: [Device] {
+     return [.macBookPro16Inch2019, .macBookPro13Inch2019TwoThunderbolt3Ports, .macBookPro15Inch2019, .macBookPro13Inch2019FourThunderbolt3Ports, .macBookPro15Inch2018, .macBookPro15Inch2017, .macBookPro13Inch2017FourThunderbolt3Ports, .macBookPro13Inch2017TwoThunderbolt3Ports, .macBookPro15Inch2016, .macBookPro13Inch2016FourThunderbolt3Ports, .macBookPro13Inch2016TwoThunderbolt3Ports, .macBookProRetina15InchMid2015, .macBookProRetina13InchEarly2015, .macBookProRetina15InchMid2014, .macBookProRetina13InchMid2014]
+  }
+
+  public static var allIMacs: [Device] {
+     return [.iMacRetina5K27Inch2019, .iMacRetina4K215Inch2019, .iMacRetina5K27Inch2017, .iMacRetina4K215Inch2017, .iMac215Inch2017, .iMacRetina5K27InchLate2015, .iMacRetina4K215InchLate2015, .iMac215InchLate2015, .iMacRetina5K27InchMid2015, .iMac215InchMid2014, .iMac27InchLate2013, .iMac215InchLate2013, .iMac215InchLate2012, .iMac27InchMid2011, .iMac215InchMid2011, .iMac27InchMid2010, .iMac215InchMid2010]
+  }
+
+  public static var allIMacPros: [Device] {
+     return [.iMacPro2017]
+  }
+
+  public static var allMacPros: [Device] {
+     return [.macPro2019, .macProLate2013, .macProMid2012, .macProEarly2009]
+  }
+
+  public var isMacMini: Bool {
+    return isOneOf(Device.allMacMinis)
+  }
+
+  public var isMacBookAir: Bool {
+    return isOneOf(Device.allMacBookAirs)
+  }
+
+  public var isMacBook: Bool {
+    return isOneOf(Device.allMacBooks)
+  }
+
+  public var isMacBookPro: Bool {
+    return isOneOf(Device.allMacBookPros)
+  }
+
+  public var isIMac: Bool {
+    return isOneOf(Device.allIMacs)
+  }
+
+  public var isIMacPro: Bool {
+    return isOneOf(Device.allIMacPros)
+  }
+
+  public var isMacPro: Bool {
+    return isOneOf(Device.allMacPros)
+  }
   #endif
 
   /// All real devices (i.e. all devices except for all simulators)
@@ -821,6 +1210,8 @@ public enum Device {
       return allTVs
     #elseif os(watchOS)
       return allWatches
+    #elseif os(macOS)
+      return allMacs
     #endif
   }
 
@@ -874,6 +1265,8 @@ public enum Device {
     guard isCurrent else { return nil }
     #if os(watchOS)
     return WKInterfaceDevice.current().name
+    #elseif os(macOS)
+    return description
     #else
     return UIDevice.current.name
     #endif
@@ -884,6 +1277,8 @@ public enum Device {
     guard isCurrent else { return nil }
     #if os(watchOS)
     return WKInterfaceDevice.current().systemName
+    #elseif os(macOS)
+    return "macOS"
     #else
     return UIDevice.current.systemName
     #endif
@@ -894,6 +1289,8 @@ public enum Device {
     guard isCurrent else { return nil }
     #if os(watchOS)
     return WKInterfaceDevice.current().systemVersion
+    #elseif os(macOS)
+    return ProcessInfo.processInfo.operatingSystemVersionString
     #else
     return UIDevice.current.systemVersion
     #endif
@@ -904,6 +1301,10 @@ public enum Device {
     guard isCurrent else { return nil }
     #if os(watchOS)
     return WKInterfaceDevice.current().model
+    #elseif os(macOS)
+    var set = CharacterSet.decimalDigits
+    set.insert(",")
+    return Device.identifier.components(separatedBy: set).joined()
     #else
     return UIDevice.current.model
     #endif
@@ -914,6 +1315,8 @@ public enum Device {
     guard isCurrent else { return nil }
     #if os(watchOS)
     return WKInterfaceDevice.current().localizedModel
+    #elseif os(macOS)
+    return model
     #else
     return UIDevice.current.localizedModel
     #endif
@@ -992,6 +1395,8 @@ public enum Device {
     case .unknown: return nil
     }
     #elseif os(tvOS)
+    return nil
+    #elseif os(macOS)
     return nil
     #endif
   }
@@ -1099,6 +1504,73 @@ extension Device: CustomStringConvertible {
       case .appleTVHD: return "Apple TV HD"
       case .appleTV4K: return "Apple TV 4K"
       case .simulator(let model): return "Simulator (\(model.description))"
+      case .unknown(let identifier): return identifier
+      }
+    #elseif os(macOS)
+      switch self {
+      case .macMini2018: return "Mac mini (2018)"
+      case .macMiniLate2014: return "Mac mini (Late 2014)"
+      case .macMiniLate2012: return "Mac mini (Late 2012)"
+      case .macMiniMid2011: return "Mac mini (Mid 2011)"
+      case .macMiniMid2010: return "Mac mini (Mid 2010)"
+      case .macMini2009: return "Mac mini (2009)"
+      case .iMacRetina5K27Inch2019: return "iMac (Retina 5K, 27-inch, 2019)"
+      case .iMacRetina4K215Inch2019: return "iMac (Retina 4K, 21.5-inch, 2019)"
+      case .iMacRetina5K27Inch2017: return "iMac (Retina 5K, 27-inch, 2017)"
+      case .iMacRetina4K215Inch2017: return "iMac (Retina 4K, 21.5-inch, 2017)"
+      case .iMac215Inch2017: return "iMac (21.5-inch, 2017)"
+      case .iMacRetina5K27InchLate2015: return "iMac (Retina 5K, 27-inch, Late 2015)"
+      case .iMacRetina4K215InchLate2015: return "iMac (Retina 4K, 21.5-inch, Late 2015)"
+      case .iMac215InchLate2015: return "iMac (21.5-inch, Late 2015)"
+      case .iMacRetina5K27InchMid2015: return "iMac (Retina 5K, 27-inch)"
+      case .iMac215InchMid2014: return "iMac (21.5-inch, Mid 2014)"
+      case .iMac27InchLate2013: return "iMac (27-inch, Late 2013)"
+      case .iMac215InchLate2013: return "iMac (21.5-inch, Late 2013)"
+      case .iMac215InchLate2012: return "iMac (21.5-inch, Late 2012)"
+      case .iMac27InchMid2011: return "iMac (27-inch, Mid 2011)"
+      case .iMac215InchMid2011: return "iMac (21.5-inch, Mid 2011)"
+      case .iMac27InchMid2010: return "iMac (27-inch, Mid 2010)"
+      case .iMac215InchMid2010: return "iMac (21.5-inch, Mid 2010)"
+      case .macPro2019: return "Mac Pro (2019)"
+      case .macProLate2013: return "Mac Pro (Late 2013)"
+      case .macProMid2012: return "Mac Pro (Mid 2010 to Mid 2012)"
+      case .macProEarly2009: return "Mac Pro (Early 2009)"
+      case .macBookRetina12Inch2017: return "MacBook (Retina, 12-inch, 2017)"
+      case .macBookRetina12InchEarly2016: return "MacBook (Retina, 12-inch, Early 2016)"
+      case .macBookRetina12InchEarly2015: return "MacBook (Retina, 12-inch, Early 2015)"
+      case .macBook13InchMid2010: return "MacBook (13-inch, Mid 2010)"
+      case .macBook13InchLate2009: return "MacBook (13-inch, Late 2009)"
+      case .macBookAirRetina13Inch2019: return "MacBook Air (Retina, 13-inch, 2019)"
+      case .macBookAirRetina13Inch2018: return "MacBook Air (Retina, 13-inch, 2018)"
+      case .macBookAir13Inch2017: return "MacBook Air (13-inch, 2017)"
+      case .macBookAir13InchEarly2015: return "MacBook Air (13-inch, Early 2015)"
+      case .macBookAir11InchEarly2015: return "MacBook Air (11-inch, Early 2015)"
+      case .macBookAir13InchEarly2014: return "MacBook Air (13-inch, Early 2014)"
+      case .macBookAir11InchEarly2014: return "MacBook Air (11-inch, Early 2014)"
+      case .macBookAir13InchMid2012: return "MacBook Air (13-inch, Mid 2012)"
+      case .macBookAir11InchMid2012: return "MacBook Air (11-inch, Mid 2012)"
+      case .macBookAir13InchMid2011: return "MacBook Air (13-inch, Mid 2011)"
+      case .macBookAir11InchMid2011: return "MacBook Air (11-inch, Mid 2011)"
+      case .macBookAir13InchLate2010: return "MacBook Air (13-inch, Late 2010)"
+      case .macBookAir11InchLate2010: return "MacBook Air (11-inch, Late 2010)"
+      case .macBookAirMid2009: return "MacBook Air (Mid 2009)"
+      case .macBookPro16Inch2019: return "MacBook Pro (16-inch, 2019)"
+      case .macBookPro13Inch2019TwoThunderbolt3Ports: return "MacBook Pro (13-inch, 2019, Two Thunderbolt 3 ports)"
+      case .macBookPro15Inch2019: return "MacBook Pro (15-inch, 2019)"
+      case .macBookPro13Inch2019FourThunderbolt3Ports: return "MacBook Pro (13-inch, 2019, Four Thunderbolt 3 ports)"
+      case .macBookPro15Inch2018: return "MacBook Pro (15-inch, 2018)"
+      case .macBookPro15Inch2017: return "MacBook Pro (15-inch, 2017)"
+      case .macBookPro13Inch2017FourThunderbolt3Ports: return "MacBook Pro (13-inch, 2017, Four Thunderbolt 3 ports)"
+      case .macBookPro13Inch2017TwoThunderbolt3Ports: return "MacBook Pro (13-inch, 2017, Two Thunderbolt 3 ports)"
+      case .macBookPro15Inch2016: return "MacBook Pro (15-inch, 2016)"
+      case .macBookPro13Inch2016FourThunderbolt3Ports: return "MacBook Pro (13-inch, 2016, Four Thunderbolt 3 ports)"
+      case .macBookPro13Inch2016TwoThunderbolt3Ports: return "MacBook Pro (13-inch, 2016, Two Thunderbolt 3 ports)"
+      case .macBookProRetina15InchMid2015: return "MacBook Pro (Retina, 15-inch, Mid 2015)"
+      case .macBookProRetina13InchEarly2015: return "MacBook Pro (Retina, 13-inch, Early 2015)"
+      case .macBookProRetina15InchMid2014: return "MacBook Pro (Retina, 15-inch, Mid 2014)"
+      case .macBookProRetina13InchMid2014: return "MacBook Pro (Retina, 13-inch, Mid 2014)"
+      case .iMacPro2017: return "iMac Pro (2017)"
+      case .simulator(let model): return "Simulator (\(model))"
       case .unknown(let identifier): return identifier
       }
     #endif
@@ -1582,5 +2054,27 @@ extension Device {
     return self.cameras.contains(.ultraWide)
   }
 
+}
+#endif
+
+#if os(macOS)
+private func sysctlData(for keys: [Int32]) throws -> [Int8] {
+    return try keys.withUnsafeBufferPointer { keysPointer -> [Int8] in
+        // Get the data size
+        var requiredSize = 0
+        var result = Darwin.sysctl(UnsafeMutablePointer<Int32>(mutating: keysPointer.baseAddress), UInt32(keys.count), nil, &requiredSize, nil, 0)
+        if result != 0, let code = POSIXErrorCode(rawValue: errno) {
+            throw POSIXError(code)
+        }
+        // get info
+        let data = [Int8](repeating: 0, count: requiredSize)
+        result = data.withUnsafeBufferPointer { dataBuffer -> Int32 in
+            Darwin.sysctl(UnsafeMutablePointer<Int32>(mutating: keysPointer.baseAddress), UInt32(keys.count), UnsafeMutableRawPointer(mutating: dataBuffer.baseAddress), &requiredSize, nil, 0)
+        }
+        if result != 0, let code = POSIXErrorCode(rawValue: errno) {
+            throw POSIXError(code)
+        }
+        return data
+    }
 }
 #endif
