@@ -785,6 +785,8 @@ public enum Device {
         return UIScreen.main.nativeScale > UIScreen.main.scale
       }
     }
+  
+    public var isIp
 
     /// All Touch ID Capable Devices
     public static var allTouchIDCapableDevices: [Device] {
@@ -917,6 +919,16 @@ public enum Device {
   public static var allSimulators: [Device] {
     return allRealDevices.map(Device.simulator)
   }
+  
+  /// all SensorHousing Devices
+  public static var allFullScreenDevices: [Device] {
+    return allDevicesWithSensorHousing + allSimulatorDevicesWithSensorHousing
+  }
+  
+  ///  Returns whether the device is a SensorHousing Device
+  public static var isFullScreenDevice: Bool {
+    return allFullScreenDevices.contains(current)
+ }
 
   /**
    This method saves you in many cases from the need of updating your code with every new device.
